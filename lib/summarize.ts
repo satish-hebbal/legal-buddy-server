@@ -30,6 +30,7 @@ class TextSummarizer {
       max_tokens: 2048,
     });
 
+    console.log(chatCompletion);
     if (chatCompletion?.choices === undefined) {
       return "";
     }
