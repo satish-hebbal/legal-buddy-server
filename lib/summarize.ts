@@ -30,6 +30,10 @@ class TextSummarizer {
       max_tokens: 2048,
     });
 
+    if (chatCompletion?.choices === undefined) {
+      return "";
+    }
+
     const res = chatCompletion.choices[0].message.content as string;
     return res;
   }
